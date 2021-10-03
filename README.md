@@ -7,7 +7,7 @@
                         : $ python dmcar_lane.py -b 4
 
 - dmcar_model.py        : lane follower using NVIDIA CNN model
-                        : $ python dmcar_model.py -b 4 -m [model_name]
+                        : $ python dmcar_model.py -b 4
                         : MODEL: lane_navigation.model
 
 - dmcar_coral.py        : Stop NoStop model using pre-trained MobileNet V2
