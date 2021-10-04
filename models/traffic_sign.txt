@@ -1,6 +1,0 @@
-class
-traffic-signal
-person
-speed25
-speed40
-stop
