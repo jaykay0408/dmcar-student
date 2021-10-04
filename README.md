@@ -19,7 +19,7 @@ follow the instruction to conduct the project.
 
 Note: All files that are necessary in this project are available at
 project GitHub site
-<https://github.com/jaykay0408/Auto-Car-Data-Mining>
+<https://github.com/jaykay0408/dmcar-student>
 
 ## Phase 0: Materials for Autonomous Vehicle
 
@@ -232,8 +232,7 @@ OR
 Download the autonomous vehicle DM-Car program from Github site. First,
 login Raspberry Pi using VNC viewer (or ssh).
  
-    $ wget https://github.com/jaykay0408/Auto-Car-Data-Mining/raw/master/dmcar-student.tar
-    $ tar xvf dmcar-student.tar
+    $ git clone https://github.com/jaykay0408/dmcar-student
 
 Start virtualenv (name 'picar3')
 
@@ -263,7 +262,7 @@ dmcar-student consist of the following files and directory:
     1.  lane follower using NVIDIA CNN model
     2.  To run the program
     ```
-    $ python dmcar_model.py -b 4 -m [model_name]
+    $ python dmcar_model.py -b 4
     ```
     3.  MODEL: lane_navigation.model
 -   dmcar_coral.py
