@@ -29,10 +29,11 @@ project GitHub site
 | Raspberry Pi 4 Model B - 4GB RAM .         |     35.00 |     1    | https://vilros.com/products/raspberry-pi-4-4gb-ram|
 | Raspberry Pi 4 Power Supply (USB-C) .      |      9.99 |     1    | https://www.amazon.com/dp/B07TYQRXTK/             |
 | SanDisk Ultra 32GB MicroSD Memory Card     |      7.99 |     1    | https://www.amazon.com/dp/B073JWXGNT/             |
-| micro HDMI male to HDMI female cable .     |      6.99 |     1    | https://www.amazon.com/dp/B00B2HORKE/            |
+| micro HDMI male to HDMI female cable .     |      6.99 |     1    | https://www.amazon.com/dp/B00B2HORKE/             |
 | Black Electrical Tape                      |     10.00 |     6    | https://www.amazon.com/dp/B0143LD8QY/             |
 | Wooden Stop Sign                           |     12.99 |     1    | https://www.amazon.com/dp/B076FL4HSK/             |
 | Google Coral USB Accelerator               |     59.99 |     1    | https://coral.ai/products/accelerator             |
+| USB Web Camera (120 degree)                |      6.99 |     1    | https://www.amazon.com/dp/B08G48M1XH/             | 
 | 18650 Batteries 6000mah 3.7v With Charger  |      8.64 |     1    | [Ebay link](https://www.ebay.com/p/4pcs-18650-Batteries-6000mah-3-7v-Rechargeable-Li-ion-Battery-With-Charger/23024017467?iid=382745853004)                                              |
 | ***Total Price per Car***                        | ***250 ~ 270*** |     1    |                                                   |
 
