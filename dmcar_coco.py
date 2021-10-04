@@ -161,12 +161,12 @@ def main():
             cv2.rectangle(blend_frame, (int(startX), int(startY)),
                     (int(endX), int(endY)), (0, 255, 0), 2)
             y = int(startY) - 15 if int(startY) - 15 > 15 else int(startY) + 15
-            text = "{}: {:.2f}%".format(label, r.score * 100)
-            cv2.putText(blend_frame, text, (int(startX*0.5), y),
+            text = "{}: {:.2f}%".format(str(r.id)+"."+ label, r.score * 100)
+            cv2.putText(blend_frame, text, (int(startX), y),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
             # Replace r.id number based on label file
-            if r.id == 4:
+            if r.id == 5:
             #if r.id == 12:
                 proba = r.score
                 stop1 = proba
