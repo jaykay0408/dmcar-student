@@ -1,2 +1,0 @@
-0 nostop
-1 stop
