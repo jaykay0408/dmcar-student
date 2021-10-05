@@ -223,14 +223,7 @@ the following functionalities:
     -   Traffic Sign Object Detection Model: "Traffic Sign Model" by Retrain EfficientDet for the Edge TPU with TensorFlow Lite Model Maker (with TF2)
        -   [Google Colab 2](https://colab.research.google.com/drive/1TXbcYvZ4TAkbzwqfQ_4KVvp4z51HztDO)
 
-Apply calibration values to DM-Car program either editing or copying config file.
-
-    $ cp /home/pi/SunFounder_PiCar-V/remote_control/remote_control/driver/config /home/pi/dmcar-student/picar/config
-
-OR
-	Edit /home/pi/dmcar-student/picar/config file with the calibration values from Phase 1.
-
-Download the autonomous vehicle DM-Car program from Github site. First,
+First, download the autonomous vehicle DM-Car program from Github site. First,
 login Raspberry Pi using VNC viewer (or ssh).
  
     $ git clone https://github.com/jaykay0408/dmcar-student
@@ -329,6 +322,15 @@ dmcar-student consist of the following files and directory:
     2. dmcar_model.py
 -   models
     1. directory to keep created models
+
+Apply calibration values to DM-Car program either editing or copying config file.
+```
+$ cp /home/pi/SunFounder_PiCar-V/remote_control/remote_control/driver/config /home/pi/dmcar-student/picar/config
+```
+OR
+```
+Edit /home/pi/dmcar-student/picar/config file with the calibration values from Phase 1.
+```
 
 ***Homework: Submit the followings:***
 -   How to improve the lane detection
