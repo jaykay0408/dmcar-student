@@ -387,6 +387,8 @@ You will use a deep learning approach to make our picar follow lane autonomously
     (picar3) $ dmcar.py -b 4 -m lane.model
     ```
 
+[![Alt text](https://img.youtube.com/vi/73mKrprmRVM/0.jpg)](https://www.youtube.com/watch?v=73mKrprmRVM)
+
 ## Phase 5: Creating Models for Traffic Signs
 In this phase, you are going to create Deep Learning model to classify or detect traffic signs (starting from "Stop Sign", then extend to other traffic signs including "Speed", "Traffic Signal", and others.
 To create Deep Learning model, there are 4 main methods as below:
