@@ -357,6 +357,8 @@ You will use a popular, open-source computer vision package, called OpenCV, to h
     -   "-b", "--buffer": max buffer size, default=5
     -   "-f", "--file": ath for the training file header, e.g., -f out_file. Files will be stored at ~/dmcar_student/model_lane_follow/train_data
 
+[![Alt text](https://img.youtube.com/vi/QBpU1hVyHRM/0.jpg)](https://www.youtube.com/watch?v=QBpU1hVyHRM)
+
 ### Method 2: Lane follwer using Deep Learning model (i.e., NVIDIA CNN model)
 You will use a deep learning approach to make our picar follow lane autonomously. For the training model, Nvidia CNN model is used in this method. The inputs to the Nvidia model are video images from a camera mounted on a car, and outputs are the steering angle of the car. At the core of the NVidia model, there is a Convolutional Neural Network. Start "picar3" virtual environment using "workon picar3".
 -   Start Terminal, picar3 virtual environment, and go to a directory
@@ -428,6 +430,8 @@ Lab: Section 5. However, you can use the same Exercise Lab on your Raspberry Pi.
     (picar3) $ dmcar.py -b 4
     ```
 
+[![Alt text](https://img.youtube.com/vi/rQEJf-QBXbI/0.jpg)](https://www.youtube.com/watch?v=rQEJf-QBXbI)
+
 ### Model 2: Creating Training Model for Traffic Signs using Google Colab (MobileNet V2 classifier for the Edge TPU)
 To create training model for traffic signs, use Colab for MobileNet V2 classifier for the Edge TPU. You can use the same dataset created in Model 1.
 -   Start Terminal, picar3 virtual environment, and go to a directory
@@ -485,6 +489,8 @@ In order to use a pre-trained model, you need to download pre-trained model and 
     (picar3) $ dmcar_coco.py -b 4
     ```
 
+[![Alt text](https://img.youtube.com/vi/eECgu59yxKA/0.jpg)](https://www.youtube.com/watch?v=eECgu59yxKA)
+
 ### Model 4: Re-Training Model for Traffic Signs using Google Colab (EfficientDet-Lite detector for the Edge TPU)
 To create re-training model for traffic signs, use Colab for EfficientDet-Lite detector for the Edge TPU. You need to create a dataset of traffic signs where each object is labeled with CSV format.
 -   First, taking at least 40 photos using a cell phone or PiCar. Each photo should have several traffic signs including stop, traffic signal, speed25, speed50, yield, rail road and person. You can setup variety of situation to take a photo, such as distance, tilt and different shapes. To use a USB camera mounted on PiCar, you can use the following command or create python script with OpenCV library.
@@ -534,6 +540,8 @@ To create re-training model for traffic signs, use Colab for EfficientDet-Lite d
     ```
     (picar3) $ dmcar_coco.py -b 4
     ```
+
+[![Alt text](https://img.youtube.com/vi/5VJQ5Yg2PbY/0.jpg)](https://www.youtube.com/watch?v=5VJQ5Yg2PbY)
 
 ***Homework: Submit the followings:***
 -   Uploading collected dataset into proper storage, such as Google
@@ -695,9 +703,7 @@ You must use Github for your documentation
                         : dmcar_model.py
 
 - Stop No Stop model    : Google Colab to create Stop NoStop model
-                        : Classification model
-https://colab.research.google.com/drive/1s-1x8KnNcI5fphLC_yqo7BxsoSWow-1i?usp=sharing
+                        : [Classification model](https://colab.research.google.com/drive/1s-1x8KnNcI5fphLC_yqo7BxsoSWow-1i) 
 
 - Traffic Signs model   : Google Colab to create Traffic Sign model
-                        : Object Detection model
-https://colab.research.google.com/drive/1TXbcYvZ4TAkbzwqfQ_4KVvp4z51HztDO?usp=sharing
+                        : [Object Detection model](https://colab.research.google.com/drive/1TXbcYvZ4TAkbzwqfQ_4KVvp4z51HztDO)
