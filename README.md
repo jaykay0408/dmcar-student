@@ -1,7 +1,8 @@
 # AtoI Lab : Autonomous Car using Deep Learning and Computer Vision
 Autonomous Car project in AtoI Lab : PiCar Version
 
-(If you are using new PiCar, i.e., Picar-X, go to https://github.com/jaykay0408/dmcar-new)
+-   If you are using AtoI Car, i.e., AtoI-Car, go to https://github.com/jaykay0408/dmcar-atoi
+-   If you are using new PiCar, i.e., Picar-X, go to https://github.com/jaykay0408/dmcar-new
 
 **Objectives**:
 1.  Understanding AI with Deep Learning and Computer Vision
