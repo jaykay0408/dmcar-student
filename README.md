@@ -622,16 +622,15 @@ Your picar should follow the tasks below:
 -   Evaluations
 -   Submission
     -   Documenting the following at GitHub, then submit the Github link
-        to Canvas
         -   Proposed deep learning model
         -   Regarding dataset
         -   Implementation including source code, trained model and any
             others
         -   Evaluations
     -   Upload dataset into any shareable storage such as google drive
-        or Dropbox, then submit the link to Canvas
+        or Dropbox, then submit the link
     -   Submit screenshots and short clips that shows your
-        implementation and progress to Canvas
+        implementation and progress
 
 ## Phase 7: Final Competition
 The final phase of this project is a competition with other teams.
@@ -659,7 +658,7 @@ The final phase of this project is a competition with other teams.
 You must use Github for your documentation
 -   Due: Before the final competition day
 -   Also, submit 5 minutes final video or Youtube link
--   Submission: Github link to Canvas
+-   Submission: Github link
 
 # dmcar-student Files
 - dmcar.py              : main file to control autonomous car with Stop detector
