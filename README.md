@@ -232,7 +232,7 @@ login Raspberry Pi using VNC viewer (or ssh).
 Start virtualenv (name 'picar3')
 
     $ workon picar3
-    $ dmcar-student
+    (picar3) $ dmcar-student
 
 dmcar-student consist of the following files and directory:
 
