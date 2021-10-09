@@ -50,7 +50,7 @@ Video Car Kit V2.0 for Raspberry Pi" as below:
 -   Name in this project: DM-Car
 -   URL: <https://www.sunfounder.com/smart-video-car-kit-v2-0.html>
 
-![Alt text](https://github.com/jaykay0408/Auto-Car-Data-Mining/blob/master/Images/image1.jpg)
+![Alt text](https://github.com/jaykay0408/Auto-Car-Data-Mining/blob/master/Images/picar-full.jpg)
 
 You can assembly a car using the instruction included in a box. However,
 the quality of printed images is not clear, so you should be very
