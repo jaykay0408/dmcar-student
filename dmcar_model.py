@@ -68,13 +68,13 @@ def main():
     # allow the camera or video file to warm up
     time.sleep(1.0)
 
-    SPEED = 0
+    SPEED = 50
     ANGLE = 90			# steering wheel angle: 90 -> straight 
     MAX_ANGLE = 20		# Maximum angle to turn right at one time
     MIN_ANGLE = -MAX_ANGLE	# Maximum angle to turn left at one time
     isMoving = False		# True: car is moving
     posError = []		# difference between middle and car position
-    bw.speed = SPEED		# car speed
+    bw.speed = 0		# car speed
     fw.turn(90)			# steering wheel angle
     curr_steering_angle = 90	# default angle
     i = 0			# frome sequence
@@ -166,7 +166,11 @@ def main():
     # if we are not using a video file, stop the camera video stream
     writer.release()
     vs.stop()
-    
+
+    # initialize picar
+    bw.speed = 0
+    fw.turn(90)
+	    
     # close all windows
     cv2.destroyAllWindows()
 
