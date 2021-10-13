@@ -14,6 +14,7 @@ from pycoral.utils.edgetpu import make_interpreter
 
 from keras.preprocessing.image import img_to_array
 from keras.models import load_model
+import tensorflow as tf
 from collections import deque
 from imutils.video import VideoStream
 import numpy as np
@@ -50,6 +51,7 @@ LABEL_PATH = "./models/traffic_sign.txt"
 
 # to hide warning message for tensorflow
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 
 # Start Queues
 show_queue = queue.Queue()
@@ -76,7 +78,10 @@ def main():
     interpreter.allocate_tensors()
 
     # Grab the reference to the webcam
-    vs = VideoStream(src=-1).start()
+    # vs = VideoStream(src=-1).start()
+    vs = cv2.VideoCapture(-1)
+    vs.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
+    vs.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
 
     # detect lane based on the last # of frames
     frame_buffer = deque(maxlen=args["buffer"])
@@ -117,12 +122,12 @@ def main():
     while True:
         stop1 = stop2 = notStop1 = notStop2 = 0.0
         # grab the current frame
-        frame = vs.read()
+        ret, frame = vs.read()
         if frame is None:
             break
 
         # resize the frame (width=320 or width=480)
-        frame = imutils.resize(frame, width=480)
+        frame = imutils.resize(frame, width=320)
         (h, w) = frame.shape[:2]
 
         # crop for COCO model (i.e., whole frame)
@@ -283,8 +288,9 @@ def main():
             bw.stop()
 
     # if we are not using a video file, stop the camera video stream
-    writer.release()
-    vs.stop()
+    if writer is not None:
+        writer.release()
+    vs.release()
 
     # initialize picar
     bw.speed = 0
