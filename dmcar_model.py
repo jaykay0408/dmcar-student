@@ -24,6 +24,7 @@ import datetime
 import math
 import os
 from keras.models import load_model
+import tensorflow as tf
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
@@ -40,7 +41,9 @@ MODEL_PATH = "./models/lane.model"
 
 # to hide warning message for tensorflow
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 
+# PiCar setup
 picar.setup()
 db_file = "/home/pi/dmcar-student/picar/config"
 fw = front_wheels.Front_Wheels(debug=False, db=db_file)
@@ -57,7 +60,10 @@ def main():
     model = load_model(MODEL_PATH)
 
     # Grab the reference to the webcam
-    vs = VideoStream(src=0).start()
+    #vs = VideoStream(src=0).start()
+    vs = cv2.VideoCapture(-1)
+    vs.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
+    vs.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
 
     # detect lane based on the last # of frames
     frame_buffer = deque(maxlen=args["buffer"])
@@ -88,7 +94,7 @@ def main():
     # keep looping
     while True:
         # grab the current frame
-        frame = vs.read()
+        ret, frame = vs.read()
         if frame is None:
             break
 
@@ -164,8 +170,9 @@ def main():
     	    bw.stop()
     
     # if we are not using a video file, stop the camera video stream
-    writer.release()
-    vs.stop()
+    if writer is not None:
+        writer.release()
+    vs.release()
 
     # initialize picar
     bw.speed = 0
