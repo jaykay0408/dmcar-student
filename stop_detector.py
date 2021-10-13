@@ -4,6 +4,7 @@
 # import the necessary packages
 from keras.preprocessing.image import img_to_array
 from keras.models import load_model
+import tensorflow as tf
 from imutils.video import VideoStream
 from threading import Thread
 import numpy as np
@@ -12,10 +13,10 @@ import time
 import cv2
 import os
 
-# define the paths to the Not Santa Keras deep learning model and
-# audio file
+# define the paths to the Not STOP-NoT-STOP deep learning model
 MODEL_PATH = "./models/stop_not_stop.model"
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 
 # initialize the total number of frames that *consecutively* contain
 # stop sign along with threshold required to trigger the sign alarm
@@ -31,15 +32,19 @@ model = load_model(MODEL_PATH)
 
 # initialize the video stream and allow the camera sensor to warm up
 print("[INFO] starting video stream...")
-vs = VideoStream(src=0).start()
+# vs = VideoStream(src=0).start()
 # vs = VideoStream(usePiCamera=True).start()
+vs = cv2.VideoCapture(-1)
+vs.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
+vs.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
+
 time.sleep(2.0)
 
 # loop over the frames from the video stream
 while True:
 	# grab the frame from the threaded video stream and resize it
 	# to have a maximum width of 320 pixels
-	frame = vs.read()
+	ret, frame = vs.read()
 	frame = imutils.resize(frame, width=320)
 
 	# prepare the image to be classified by our deep learning network
@@ -94,5 +99,5 @@ while True:
 # do a bit of cleanup
 print("[INFO] cleaning up...")
 cv2.destroyAllWindows()
-vs.stop()
+vs.release()
 
