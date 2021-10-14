@@ -127,7 +127,7 @@ def main():
 
         # if a file path is provided, write a training image
         if args.get("file", False):
-            cv2.imwrite("./train_data/%s_%03d_%03d.png" % (args["file"], i, ANGLE), org_frame)
+            cv2.imwrite("./model_lane_follow/train_data/%s_%03d_%03d.png" % (args["file"], i, ANGLE), org_frame)
             i += 1
 
         keyin = cv2.waitKey(1) & 0xFF
