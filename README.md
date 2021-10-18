@@ -385,10 +385,34 @@ You will use a deep learning approach to make our picar follow lane autonomously
     ```
 -   Run dmcar_model.py file to test the model
     ```
-    (picar3) $ dmcar_model.py -b 4 -m lane.model
+    (picar3) $ dmcar_model.py -b 4
     ```
 
 [![Alt text](https://img.youtube.com/vi/73mKrprmRVM/0.jpg)](https://www.youtube.com/watch?v=73mKrprmRVM)
+
+If you want to save the time to create a model, you can use Colab as below:
+
+-   Create a dataset (image) for Google Colab
+    ```
+    (picar3) $ cd ~/dmcar-student/model_lane_follow
+    (picar3) $ tar cvzf train_data.tgz train_data
+    ```
+-   Upload train_data.tgz file to Google Drive "data" folder. 
+    -   If you do not have "data" folder, you need to creat it first
+-   On Rapsberry Pi, start Web Browser (click circle shape earth on top menu bar)
+-   [Goto Google Colab 1](https://colab.research.google.com/drive/1VCmkeobbYvh64DlpT0UEQHre7lETHLla)
+    - You can click a short cut on "Bookmark Bar" (Lane Follow ...) 
+    - Run cell by cell OR Run All-Cell
+-   When finishing the Colab, model file will be downloaded to your /home/pi/Downloads. Move the downloaded model file to models directory
+    ```
+    (picar3) $ cd ~
+    (picar3) $ mv ./Downloads/lane_navigation_check.h5 ./dmcar-student/models/lane.model
+-   If model name is different from "lane.model", change
+    MODEL\_PATH at dmcar_model.py
+    ```
+    # define the paths to the Nvidia learning model
+    MODEL_PATH = "./models/lane.model"
+    ```
 
 ## Phase 5: Creating Models for Traffic Signs
 In this phase, you are going to create Deep Learning model to classify or detect traffic signs (starting from "Stop Sign", then extend to other traffic signs including "Speed", "Traffic Signal", and others.
