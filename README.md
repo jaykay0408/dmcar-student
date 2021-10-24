@@ -157,7 +157,7 @@ For more information about the connection to Rapsberry Pi, you can refer the fol
         -   Password: raspberry
 -   ***Option 3***: cloud connection using VNC server
     -   Use this option if you are using wi-fi under the followings:
-        -   Enterprise wi-fi network, e.g., knights-wifi at UB campus
+        -   Enterprise wi-fi network, e.g., campus or company
         -   WPA2 Enterprise authentication
         -   Network that disable/block port number 5900
     -   Establishing a cloud connection for VNC server on your raspberry
