@@ -14,8 +14,8 @@ import os
 
 # define the paths to the Not Santa Keras deep learning model and
 # audio file
-#MODEL_PATH = "stop_not_stop.model"
-MODEL_PATH = "aa.tflite"
+MODEL_PATH = "stop_not_stop.model"
+#MODEL_PATH = "aa.tflite"
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 # initialize the total number of frames that *consecutively* contain
