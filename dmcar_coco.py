@@ -44,10 +44,10 @@ args = vars(ap.parse_args())
 
 # define the paths to the Stop/Non-Stop Keras deep learning model
 #MODEL_PATH = "./models/traffic_sign.tflite"
-MODEL_PATH = "./models/traffic_sign_edgetpu.tflite"
-LABEL_PATH = "./models/traffic_sign.txt"
-#MODEL_PATH = "./models/coco_model.tflite"    # General CoCo Model
-#LABEL_PATH = "./models/coco_labels.txt"      # CoCo Model Label
+#MODEL_PATH = "./models/traffic_sign_edgetpu.tflite"
+#LABEL_PATH = "./models/traffic_sign.txt"
+MODEL_PATH = "./models/coco_model.tflite"    # General CoCo Model
+LABEL_PATH = "./models/coco_labels.txt"      # CoCo Model Label
 
 # to hide warning message for tensorflow
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
