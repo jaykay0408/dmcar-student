@@ -401,7 +401,7 @@ If you want to save the time to create a model, you can use Colab as below:
 -   Upload train_data.tgz file to Google Drive "data" folder. 
     -   If you do not have "data" folder, you need to creat it first
 -   On Rapsberry Pi, start Web Browser (click circle shape earth on top menu bar)
--   [Goto Google Colab 3](https://colab.research.google.com/drive/1VCmkeobbYvh64DlpT0UEQHre7lETHLla)
+-   [Goto Google Colab 1](https://colab.research.google.com/drive/1VCmkeobbYvh64DlpT0UEQHre7lETHLla)
     - You can click a short cut on "Bookmark Bar" (Lane Follow ...) 
     - Run cell by cell OR Run All-Cell
 -   When finishing the Colab, model file will be downloaded to your /home/pi/Downloads. Move the downloaded model file to models directory
